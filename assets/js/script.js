@@ -35,7 +35,7 @@ function checkTime() {
         var textarea = $(`#${hourIdArray[i]}`);
         if (hourIdArray[i] < currentTime) {
             textarea.addClass('past');
-        } else if (hourIdArray[i] === currentTime) {
+        } else if (hourIdArray[i] == currentTime) {
             textarea.addClass('present');
         } else {
             textarea.addClass('future');
@@ -47,13 +47,17 @@ function saveOnClick() {
     var time = $(this).siblings('.hour').text();
     var task = $(this).siblings('.description').val();
     // Save the text for that event to localStorage
-    localStorage.setItem(time, task);
-    // Confirm to user that data was saved by displaying a feedback
-    rowsContainer.prepend(`<p class="feedback">Task saved to <span>localStorage<span></p>`);
-    // Hide SAVE feedback after 1.5 sec
-    setInterval(function () {
-        $('.feedback').addClass('hide');
-    }, 1500);
+    if (task === '') {
+        alert('It looks like you forgot to enter a task. Please type one, then click "Save."');
+    } else {
+        localStorage.setItem(time, task);
+        // Confirm to user that data was saved by displaying a feedback
+        rowsContainer.prepend(`<p class="feedback">Task saved to <span>localStorage<span> ✓</p>`);
+        // Hide SAVE feedback after 1.5 sec
+        setInterval(function () {
+            $('.feedback').addClass('hide');
+        }, 1500);
+    }
 }
 // Grab button
 saveBtn = $('.saveBtn');
@@ -73,3 +77,10 @@ function getSavedTasks() {
 }
 // Call function to display the tasks saved to localStorage
 getSavedTasks();
+
+rowsContainer.after(`<div class="center"><button id="clear" class="btn btn-lg btn-info">Clear calendar</button></div>`);
+var clearBtn = $('#clear')
+clearBtn.on('click', function clearCalendar() {
+    localStorage.clear();
+    alert('Calendar cleared. Please refresh the page.')
+});
