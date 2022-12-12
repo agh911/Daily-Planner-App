@@ -17,12 +17,15 @@ The app needed to check for the following:
 
 The following animation shows the application's functionality:
 
-![daily-planner-app](assets/images/.gif)
+![work-scheduler-app](assets/images/work-scheduler-app.gif)
 ## Links
 
 * [Deployed application.](https://agh911.github.io/Work-Day-Scheduler-App/)
 ## Credits
 
+* [jQuery documentation](https://api.jquery.com/)
+* [Moment.js documentation](https://momentjs.com/docs/)
+* [Refresh page on button click.](https://www.w3schools.com/jsref/met_loc_reload.asp)
 * [GitHub Badges.](https://shields.io/)
 ## License
 
