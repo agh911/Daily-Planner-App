@@ -82,5 +82,6 @@ rowsContainer.after(`<div class="center"><button id="clear" class="btn btn-lg bt
 var clearBtn = $('#clear')
 clearBtn.on('click', function clearCalendar() {
     localStorage.clear();
-    alert('Calendar cleared. Please refresh the page.')
+    // Refesh page -> tasks no longer displayed as localStorage is first cleared
+    window.location.reload();
 });
