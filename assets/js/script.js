@@ -42,3 +42,5 @@ function checkTime() {
         }
     }
 }
+// When button is clicked - store/reset the event text corresponding withthe hour to localStorage
+    // Check if hour is past, current or future and apply the corresponding CSS class to the timeblock
