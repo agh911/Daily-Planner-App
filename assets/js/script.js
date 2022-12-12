@@ -43,10 +43,7 @@ function checkTime() {
     }
 }
 // When button is clicked - store/reset the event text corresponding withthe hour to localStorage
-// Grab button
-saveBtn = $('.saveBtn');
-// Add event listener
-saveBtn.on('click', function () {
+function saveOnClick() {
     var time = $(this).siblings('.hour').text();
     var task = $(this).siblings('.description').val();
     // Save the text for that event to localStorage
@@ -57,7 +54,11 @@ saveBtn.on('click', function () {
     setInterval(function () {
         $('.feedback').addClass('hide');
     }, 1500);
-});
+}
+// Grab button
+saveBtn = $('.saveBtn');
+// Add event listener to saveBtn
+saveBtn.on('click', saveOnClick);
 
 // Create function to display the data that was previously saved 
 function getSavedTasks() {
