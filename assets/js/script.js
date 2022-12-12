@@ -60,3 +60,15 @@ saveBtn.on("click", function() {
 });
 
 // Create function to display the data that was previously saved 
+function getSavedTasks() {
+    $(".hour").each(function() {
+        var savedHour = $(this).text();
+        var savedTask = localStorage.getItem(savedHour);
+
+        if(savedTask !== null) {
+            $(this).siblings(".description").val(savedTask);
+        }
+    });
+}
+// Call function to display the tasks saved to localStorage
+getSavedTasks();
