@@ -13,6 +13,10 @@ textarea {
   padding: 10px;
 }
 
+span {
+  color: #06aed5;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -23,6 +27,14 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+}
+
+.feedback {
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 .time-block {
