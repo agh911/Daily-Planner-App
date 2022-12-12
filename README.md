@@ -20,7 +20,7 @@ The following animation shows the application's functionality:
 ![daily-planner-app](assets/images/.gif)
 ## Links
 
-* [Deployed application.](https://agh911.github.io/Javascript-Timed-Quiz/)
+* [Deployed application.](https://agh911.github.io/Work-Day-Scheduler-App/)
 ## Credits
 
 * [GitHub Badges.](https://shields.io/)
