@@ -43,4 +43,20 @@ function checkTime() {
     }
 }
 // When button is clicked - store/reset the event text corresponding withthe hour to localStorage
-    // Check if hour is past, current or future and apply the corresponding CSS class to the timeblock
+// Grab button
+saveBtn = $('.saveBtn');
+// Add event listener
+saveBtn.on("click", function() {
+    var time = $(this).siblings(".hour").text();
+    var task = $(this).siblings(".description").val();
+    // Save the text for that event to localStorage
+    localStorage.setItem(time, task);
+    // Confirm to user that data was saved by displaying a feedback
+    rowsContainer.prepend(`<p class="feedback">Task saved to <span>localStorage<span></p>`);
+    // Hide SAVE feedback after 1.5 sec
+    setInterval(function () {
+        $('.feedback').addClass('hide');
+    }, 1500);
+});
+
+// Create function to display the data that was previously saved 
