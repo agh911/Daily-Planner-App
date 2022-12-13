@@ -53,10 +53,10 @@ function saveOnClick() {
         localStorage.setItem(time, task);
         // Confirm to user that data was saved by displaying a feedback
         rowsContainer.prepend(`<p class="feedback">Task saved to <span>localStorage<span> ✓</p>`);
-        // Hide SAVE feedback after 1.5 sec
+        // Hide SAVE feedback after 2 sec
         setInterval(function () {
             $('.feedback').addClass('hide');
-        }, 1500);
+        }, 2000);
     }
 }
 // Grab button
