@@ -12,6 +12,7 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  outline: none;
 }
 
 span {
@@ -59,7 +60,7 @@ span {
 }
 
 .past {
-  background-color: #eae8e3;
+  background-color: #cdc6c3;
   color: #000000;
 }
 
