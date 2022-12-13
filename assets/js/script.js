@@ -13,7 +13,7 @@ while (businessHours.hour() < 18) {
     // Hour
     // Textarea
     // Save button
-    rowsContainer.append(`<div class='row time-block'><p class="hour col-md-1">${businessHours.format('HA')}</p><textarea class="description col-md-10" id='${hourId}'></textarea><button class='btn saveBtn col-md-1'><i class="fas fa-archive"></i></button></div>`);
+    rowsContainer.append(`<div class='row time-block'><p class="hour col-md-1">${businessHours.format('HA')}</p><textarea class="description col-md-10" id='${hourId}'></textarea><button class='saveBtn col-md-1'><i class="fas fa-archive"></i></button></div>`);
     // Increase hour by one
     businessHours.add(1, 'hours');
     checkTime();
@@ -78,7 +78,7 @@ function getSavedTasks() {
 // Call function to display the tasks saved to localStorage
 getSavedTasks();
 
-rowsContainer.after(`<div class="center"><button id="clear" class="btn btn-lg btn-info">Clear calendar</button></div>`);
+rowsContainer.after(`<div class="center"><button id="clear" class="btn btn-lg btn-dark">Clear calendar</button></div>`);
 var clearBtn = $('#clear')
 clearBtn.on('click', function clearCalendar() {
     localStorage.clear();
