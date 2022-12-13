@@ -48,7 +48,7 @@ function saveOnClick() {
     var task = $(this).siblings('.description').val();
     // Save the text for that event to localStorage
     if (task === '') {
-        alert('It looks like you forgot to enter a task. Please type one, then click "Save."');
+        alert('Looks like you forgot to enter a task. Please type one, then click Save.');
     } else {
         localStorage.setItem(time, task);
         // Confirm to user that data was saved by displaying a feedback
